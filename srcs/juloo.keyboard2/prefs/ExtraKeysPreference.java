@@ -359,6 +359,16 @@ public class ExtraKeysPreference extends PreferenceCategory
               new KeyboardData.KeyPos(0, -1, 3),
               new KeyboardData.KeyPos(0, -1, 4),
             });
+      case "delete_word":
+        return new KeyboardData.PreferredPos(KeyValue.getKeyByName("backspace"),
+            new KeyboardData.KeyPos[]{
+              new KeyboardData.KeyPos(-1, -1, 3),
+            });
+      case "forward_delete_word":
+        return new KeyboardData.PreferredPos(KeyValue.getKeyByName("backspace"),
+            new KeyboardData.KeyPos[]{
+              new KeyboardData.KeyPos(-1, -1, 4),
+            });
     }
     return KeyboardData.PreferredPos.DEFAULT;
   }
